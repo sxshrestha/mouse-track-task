@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+      <script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
+      <style>
+        .clickarea {
+          background-color:#333333;
+          overflow:visible;
+          width:100px;
+          height:90px;
+          text-align: center;
+          padding-top: 10px;
+        }
+        #startarea {
+          text-align: center;
+          position: fixed;
+          bottom: 0%;
+          left: 50%;
+          transform: translateX(-50%);
+          margin: auto;
+          margin-bottom: 5px;
+          padding: 5px;
+          background-color:#7777ff;
+          width:100px;
+          cursor: pointer;
+        }
+        #submitButton {
+          position: fixed;
+          top: 0%;
+          left: 50%;
+          transform: translateX(-50%);
+          margin: auto;
+          margin-top: 30px;
+          display: none;
+        }
+        #press, #trial{
+          text-align: center;
+          font-size: 48px;
+        }
+      </style>
+    </head>
+
+
+
+
+
+    <body>
+      <form name='mturk_form' method='post' id='mturk_form' action='https://workersandbox.mturk.com/mturk/externalSubmit'>
+        <input type='hidden' value='' name='assignmentId' id='assignmentId'/>
+        <h1>Cursor Tracker Test</h1>
+        <div id='container'>
+        </div>
+        <div id="submitArea">
+          <input type='submit' id='submitButton' value='Submit'/>
+        </div>
+      </form>
+
+
+
+
+
+      <script language='Javascript'>turkSetAssignmentID();</script>
+      <script type='text/javascript' src='trial.js'></script>
+      <script type='text/javascript' src='controller.js'></script>
+      <script>
+        //document.getElementById("mturk_form").cursordata = response[2];
+        //document.getElementById("mturk_form").choicedata = response[3];
+      </script>
+    </body>
+  </html>
