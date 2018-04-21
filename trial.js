@@ -114,7 +114,7 @@ class Trial {
       clearTimeout(this.timers[i]);
     }
     var ret = [this.mtimes, this.mouse, this.choice];
-    setTimeout(function(){ this.next(ret);  }, 1000) //runs next trial
+    setTimeout(function(){ this.next(ret);  }, 3000) //runs next trial
 
   }
 

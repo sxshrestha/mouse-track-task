@@ -21,10 +21,13 @@ function startTrial(){
     }
   } else {
     console.log("Done!");
+    var container = document.getElementById("container");
+    container.innerHTML = "";
     for(var i = 0; i < results.length; i++){
-      console.log(results[i]);
-      console.log("\n");
+      var args = Array.prototype.slice.call(results[i]);
+      container.innerHTML += (args + "<br />");
     }
+    container.innerHTML += "<br />";
   }
 }
 
